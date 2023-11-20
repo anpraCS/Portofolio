@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- css -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
@@ -14,7 +17,9 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg">
       <div class="container">
-        <a class="navbar-brand fs-3 fw-bold" href="#">Andreas P</a>
+        <a class="navbar-brand fs-3 fw-bold text-white" href="#"
+          >Andreas Prayoga</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -30,28 +35,242 @@
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a
-                class="px-3 nav-link active fw-bolder"
+                class="px-3 nav-link active fw-medium text-white"
                 aria-current="page"
-                href="#"
+                href="#home"
                 >Home</a
               >
             </li>
             <li class="nav-item">
-              <a class="px-3 nav-link fw-medium" href="#">About</a>
+              <a class="px-3 nav-link text-white" href="#about">About</a>
             </li>
             <li class="nav-item">
-              <a class="px-3 nav-link fw-medium" href="#">Service</a>
+              <a class="px-3 nav-link text-white" href="#work">Work</a>
             </li>
             <li class="nav-item">
-              <a class="px-3 nav-link fw-medium" href="#">Work</a>
-            </li>
-            <li class="nav-item">
-              <a class="px-3 nav-link fw-medium" href="#">Contact</a>
+              <a class="px-3 nav-link text-white" href="#contact">Contact</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+    <!-- home -->
+    <section id="home" class="home container mt-5">
+      <div
+        class="row d-flex align-items-center flex-md-row flex-column-reverse"
+      >
+        <div class="col-12 col-md-8">
+          <h3 class="fw-semibold">Hi! I am</h3>
+          <h1 class="naam fw-bold">Andreas Prayoga</h1>
+          <p class="text1">I am a Front End Web Developer</p>
+          <a
+            href=""
+            class="btn py-2 px-4 bg.white white border-black border-3 rounded-pill ctn"
+            download=""
+            >Resume</a
+          >
+        </div>
+        <div
+          class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center avatar"
+        >
+          <img src="images/avatar.png" alt="photo profile" />
+        </div>
+      </div>
+      <div class="arrow w-100 mt-5 d-flex flex-column align-items-center">
+        <a class="text-decoration-none text-dark" href="#about">Learn More</a>
+        <img
+          id="arrow"
+          class="mt-1"
+          src="images/down-arrow.png"
+          alt="arrow icon"
+        />
+      </div>
+    </section>
+    <!-- about -->
+    <section id="about" class="about container">
+      <p class="about-intro lh-lg">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil sint eum
+        nostrum rerum suscipit ratione rem earum natus, culpa ipsa possimus
+        dolorem tempore vitae doloremque voluptatem magni minus, nesciunt fuga
+        quod beatae maiores porro explicabo reprehenderit laboriosam? Vel
+        necessitatibus repellendus corrupti, quas ipsa molestiae perferendis
+        atque! Eveniet distinctio natus dicta.
+      </p>
+      <div class="about-exp mt-4">
+        <div class="about-exp-item">
+          <div
+            class="about-exp-item-header d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <h5 class="fw-bold">PHP & MySQL</h5>
+              <p>LPK Unigama (Juni 2023-Juli 2023)</p>
+            </div>
+            <button
+              class="btn px-4 py-2 bg.white border-black border-3 rounded-pill ctn"
+              onclick="toggleDetail(event)"
+            >
+              Learn More
+            </button>
+          </div>
+          <p class="about-exp-item-detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            alias officiis, voluptatibus amet temporibus sapiente laborum minus
+            est ut iure perspiciatis odio deserunt omnis enim consequuntur harum
+            quia praesentium sunt.
+          </p>
+        </div>
+        <div class="about-exp-item">
+          <div
+            class="about-exp-item-header d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <h5 class="fw-bold">Fundamental Algoritma</h5>
+              <p>Coding Studio (Agustus 2023-September 2023)</p>
+            </div>
+            <button
+              class="btn px-4 py-2 bg.white border-black border-3 rounded-pill ctn"
+              onclick="toggleDetail(event)"
+            >
+              Learn More
+            </button>
+          </div>
+          <p class="about-exp-item-detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            alias officiis, voluptatibus amet temporibus sapiente laborum minus
+            est ut iure perspiciatis odio deserunt omnis enim consequuntur harum
+            quia praesentium sunt.
+          </p>
+        </div>
+        <div class="about-exp-item">
+          <div
+            class="about-exp-item-header d-flex align-items-center justify-content-between"
+          >
+            <div>
+              <h5 class="fw-bold">Front End Web Engineering</h5>
+              <p>Coding Studio (Oktober 2023-Desember 2023)</p>
+            </div>
+            <button
+              class="btn px-4 py-2 bg.white border-black border-3 rounded-pill ctn"
+              onclick="toggleDetail(event)"
+            >
+              Learn More
+            </button>
+          </div>
+          <p class="about-exp-item-detail">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
+            alias officiis, voluptatibus amet temporibus sapiente laborum minus
+            est ut iure perspiciatis odio deserunt omnis enim consequuntur harum
+            quia praesentium sunt.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- work -->
+    <section id="work" class="work container mt-5">
+      <div
+        class="row mt-5 d-flex align-items-center flex-md-row flex-column gap-5"
+      >
+        <div class="col">
+          <p class="work-intro">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Distinctio, perspiciatis magnam sequi veritatis ipsam omnis
+            recusandae nulla sunt? Assumenda possimus cumque voluptas maxime
+            est. Quisquam cupiditate dolorum commodi ut, voluptatem, eius, quo
+            quas necessitatibus nostrum velit fugit reiciendis accusamus nulla?
+          </p>
+        </div>
+        <div class="col work-img">
+          <div id="work-1" class="work-img-item">
+            <img src="images/screenshoot.png" alt="" />
+          </div>
+          <div id="work-2" class="work-img-item">
+            <img src="images/screenshoot.png" alt="" />
+          </div>
+          <div id="work-3" class="work-img-item">
+            <img src="images/screenshoot.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="contact" class="contact container mt-5">
+      <div
+        class="row mt-5 d-flex align-items-center flex-md-row flex-column gap-5"
+      >
+        <div class="col">
+          <p class="des-contact">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
+            dolorem perspiciatis praesentium animi nesciunt repudiandae pariatur
+            ipsa eos quia, tempore optio voluptate dolor omnis assumenda alias
+            repellat ea itaque ducimus?
+          </p>
+          <div class="row">
+            <div class="col d-flex gap-1">
+              <i class="search-btn nav-btn" data-feather="instagram"></i>
+              <p>@andreas.pryg</p>
+            </div>
+            <div class="col d-flex gap-1">
+              <i class="search-btn nav-btn" data-feather="phone-call"></i>
+              <p>0852-7402-2623</p>
+            </div>
+            <div class="col d-flex gap-1">
+              <i class="search-btn nav-btn" data-feather="twitter"></i>
+              <p>@andreas.pryg</p>
+            </div>
+          </div>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <form
+            class="contact-form border border-3 border-black w-75"
+            onsubmit="onFormSubmit(event)"
+          >
+            <div class="mb-3">
+              <label for="inp-email" class="form-label fw-bold">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="inp-email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inp-email" class="form-label fw-bold">Subject</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inp-subj"
+                placeholder="Your Subject"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="inp-mess" class="form-label fw-bold">Message</label>
+              <input
+                type="text"
+                class="form-control"
+                id="inp-mess"
+                placeholder="Your Message"
+                required
+              />
+            </div>
+            <div class="d-flex justify-content-center">
+              <button
+                type="submit"
+                class="btn mt-5 py-2 px-4 bg.white border border-black border-3 rounded-pill ctn"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- feather js -->
+    <script>
+      feather.replace();
+    </script>
+    <!-- js -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="

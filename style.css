@@ -1,4 +1,197 @@
+/* all */
+section {
+  padding-top: 7em;
+  position: relative;
+}
+
+section::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: 40%;
+  z-index: ;
+  font-weight: 700;
+  font-size: 5rem;
+  color: gray;
+  opacity: 0.25;
+}
+
+/* navbar */
 nav {
-  background-color: #ece3ce;
-  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 0.2);
+  background-color: #61677a;
+  box-shadow: 0 0 0 0.2em rgba(0, 0, 0, 1);
+}
+
+/* home */
+.home h3 {
+  font-size: 2.5rem;
+}
+
+.home h1 {
+  font-size: 4rem;
+  animation: popUp 5s steps(15, end);
+}
+
+.home .text1 {
+  animation: slash 1s infinite;
+}
+
+.home .avatar img {
+  width: 25rem;
+}
+
+.ctn:hover {
+  background-color: #4f6f52;
+  color: #ffffff;
+}
+
+.home .arrow img {
+  width: 5em;
+}
+
+#arrow {
+  animation: 2s upDown infinite;
+}
+
+/* about */
+.about::before {
+  content: "About";
+}
+
+.about-intro,
+.work-intro {
+  text-align: justify;
+}
+
+.about-exp-item-detail {
+  display: none;
+}
+
+/* work */
+.work::before {
+  content: "Work";
+}
+
+.work img {
+  width: 100%;
+}
+
+.work-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "work-1 work-2" "work-3 work-3";
+  gap: 0.5rem;
+}
+
+#work-1 {
+  grid-area: work-1;
+}
+
+#work-2 {
+  grid-area: work-2;
+}
+
+#work-3 {
+  grid-area: work-3;
+}
+
+.work-img-item {
+  position: relative;
+}
+
+.work-img-item:hover::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+#work-1:hover::after {
+  content: "Company Profile";
+}
+
+#work-2:hover::after {
+  content: "E-Commerce";
+}
+
+#work-3:hover::after {
+  content: "Landing Page";
+}
+
+/* contact */
+.contact {
+  height: 50rem;
+}
+.contact::before {
+  content: "Contact";
+}
+
+.contact .des-contact {
+  text-align: justify;
+  line-height: 2rem;
+}
+
+.contact-form {
+  padding: 6rem 4rem;
+}
+
+/* responsive */
+/* dekstop */
+@media (max-width: 1080px) {
+  html {
+    font-size: 100%;
+  }
+}
+
+/* tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 85%;
+  }
+  section::before {
+    left: 30%;
+  }
+  .home {
+    padding-top: 1rem;
+  }
+  .home {
+    margin-top: 0;
+  }
+
+  /* mobile */
+  @media (max-width: 450px) {
+    html {
+      font-size: 65%;
+    }
+  }
+
+/* animation */
+@keyframes slash {
+  from {
+    filter: opacity(0);
+  }
+  to {
+    filter: opacity(1);
+  }
+}
+
+@keyframes upDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1em);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
